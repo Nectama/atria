@@ -1,0 +1,1031 @@
+@font-face {
+    font-family: Agrandir;
+    src: url(customFonts/Agrandir-GrandLight.otf);
+}
+
+@font-face {
+    font-family: AgrandirH;
+    src: url(customFonts/Agrandir-GrandHeavy.otf);
+}
+
+@font-face {
+    font-family: AgrandirR;
+    src: url(customFonts/Agrandir-Regular.otf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: black;
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #DEDBD5;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* CSS for the loading image/animation on the index page*/
+
+#loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFFFFF;
+    height: 100%;
+    width: 100%;
+    z-index: 99;
+    position: fixed;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* CSS for the header and menu for both big and small screens*/
+/* I did two different headers because i couldn't solve styling issues when clicking the hamburger icon on mobile,
+so a redistribution of items was needed.This can be done better but i couldn't figure it out before delivery date*/
+
+.big-screens,
+.small-screens {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: #FFFFFF;
+    z-index: 12;
+    padding: 10px;
+}
+
+#logoContainer a p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+#logoContainer {
+    width: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.menuLinks {
+    width: 100%;
+    font-family: 'Agrandir', sans-serif;
+    display: flex;
+    justify-content: space-around;
+}
+
+.small-screens {
+    display: none;
+}
+
+@media(max-width:650px) {
+
+    .big-screens {
+        display: none;
+    }
+
+    #loader {
+        max-width: 100%;
+    }
+    
+    .small-screens {
+        display: flex;
+        flex-direction: column;
+        padding: 8px 30px;
+    }
+
+    .small-screens #logoContainer {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .small-screens .icon {
+        color: black;
+    }
+
+    .small-screens .icon .size-48 {
+        font-size: 40px;
+        font-variation-settings: 'wght' 700;
+    }
+
+    .small-screens nav {
+        width: 100%;
+    }
+
+    .small-screens nav #menuLinks {
+        padding: 15px 0;
+        width: 100%;
+        font-family: 'Agrandir', sans-serif;
+        display: none;
+        flex-direction: column;
+        animation: growDown 300ms linear forwards;
+        transform-origin: top center;
+    }
+
+    .small-screens nav #menuLinks a {
+        width: 100%;
+        padding: 20px 0;
+        text-align: right;
+    }
+
+    @keyframes growDown {
+        0% {
+            transform: scaleY(0);
+            height: 0px;
+
+        }
+
+        50% {
+            height: 130px;
+        }
+
+        80% {
+            transform: scaleY(1.1);
+            height: 233px;
+        }
+
+        100% {
+            transform: scaleY(1);
+            height: auto;
+        }
+    }
+}
+
+
+
+@media (max-width: 650px) {
+
+    header .icon {
+        display: block;
+    }
+
+    header #menuLinks {
+        display: none;
+    }
+
+    header nav {
+
+        justify-content: flex-end;
+    }
+
+
+}
+
+/*CSS for handling fade in animation*/
+
+.fade-in {
+    opacity: 0;
+    transition: opacity 1s ease-in;
+}
+
+.fade-in.visible {
+    opacity: 1;
+}
+
+/* CSS for the video and link to portfolio*/
+
+.vid {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 48px auto auto auto;
+    width: 80%;
+    animation: fadeInAnimation ease 2s;
+}
+
+@media (max-width: 1400px) {
+    .vid {
+        margin-top: 35px;
+    }
+}
+
+@media (max-width: 950px) {
+    .vid {
+        width: 100%;
+        margin: 0;
+    }
+}
+
+.portfolio-link {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin: 30px 20px 20px auto;
+    padding-right: 15px;
+}
+
+.portfolio-link h2 {
+    margin-top: 3px;
+    font-family: 'Agrandir', 'Roboto', sans-serif;
+    letter-spacing: 1px;
+    font-weight: 100;
+    font-size: 28px;
+    color: #535353;
+    text-align: right;
+}
+
+/*I had to add a stupid padding-bottom of a few px because the chevron icon doesn't properly align with the text*/
+
+.portfolio-link img {
+    height: 28px;
+    padding-left: 25px;
+    margin-bottom: 3px;
+}
+
+@media (max-width: 1400px) {
+    .portfolio-link h2 {
+        font-size: 21px;
+    }
+
+    .portfolio-link img {
+        height: 21px;
+        margin-bottom: 2px;
+    }
+}
+
+@media (max-width: 650px) {
+
+    .portfolio-link {
+        margin-top: 15px;
+        padding-right: 0;
+        margin-right: 10px;
+    }
+
+    .portfolio-link h2 {
+        font-size: 16px;
+    }
+
+    .portfolio-link img {
+        height: 16px;
+        margin-bottom: 4px;
+    }
+}
+
+/* CSS for the banner animation*/
+
+.infinite-loop {
+    position: relative;
+    height: 120px;
+    width: 100%;
+    max-width: 100%;
+    padding-bottom: 30px;
+    margin-top: 90px;
+    margin-bottom: 90px;
+    overflow: hidden;
+    animation: fadeInAnimation ease 2s;
+}
+
+.primary img,
+.secondary img {
+    height: 120px;
+}
+
+.overlay-img .static-img {
+    height: 120px;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    z-index: 8;
+}
+
+.primary .front-img {
+    width: fit-content;
+    height: 120px;
+    position: absolute;
+    animation: primary 7s linear infinite;
+    z-index: 10;
+}
+
+.secondary .front-img {
+    width: fit-content;
+    height: 120px;
+    position: absolute;
+    animation: secondary 7s linear infinite;
+    z-index: 10;
+}
+
+.primary .back-img {
+    width: fit-content;
+    animation: primary 6s linear infinite;
+    position: absolute;
+}
+
+.secondary .back-img {
+    width: fit-content;
+    animation: secondary 6s linear infinite;
+    position: absolute;
+}
+
+@keyframes primary {
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes secondary {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(0%);
+    }
+}
+
+@media (max-width: 650px) {
+
+    .infinite-loop {
+        margin-top: 30px;
+        margin-bottom: 50px;
+    }
+
+    .infinite-loop,
+    .primary .front-img,
+    .primary .back-img,
+    .secondary .front-img,
+    .secondary .back-img,
+    .overlay-img .static-img,
+    .primary .front-img,
+    .secondary .back-img {
+        height: 52px;
+    }
+
+}
+
+/* CSS for portfolio preview */
+
+.portfolio-preview {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 75%;
+    margin: auto;
+}
+
+.portfolio-preview .preview-title {
+    margin-bottom: 50px;
+}
+
+.portfolio-preview .preview-title h2 {
+    font-family: 'Agrandir', 'Roboto', sans-serif;
+    font-weight: 100;
+    font-size: 28px;
+    color: #535353;
+}
+
+.gallery {
+    display: flex;
+    justify-content: space-between;
+    height: 930px;
+    width: 100%;
+}
+
+.gallery .tall-image {
+    max-width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gallery .tall-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.small-image-group {
+    max-width: 23%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.small-image-group .small-image {
+    max-width: 100%;
+}
+
+.small-image-group .small-image:first-of-type {
+    height: 44%;
+}
+
+.small-image-group .small-image:nth-of-type(2) {
+    height: 54%;
+}
+
+.small-image-group .small-image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.half-gallery-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 49%;
+    height: 100%;
+}
+
+.big-image {
+    height: 64%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.big-image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.half-gallery-column .small-image-group {
+    height: 34%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.half-gallery-column .small-image-group .small-image {
+    height: 100%;
+    width: 48.5%;
+
+}
+
+.half-gallery-column .small-image-group .small-image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.gallery-small {
+    display: none;
+}
+
+@media (max-width: 1400px) {
+
+    .portfolio-preview {
+        width: 85%;
+    }
+
+    .portfolio-preview .preview-title h2 {
+        font-size: 28px;
+    }
+
+    .gallery {
+        height: 720px;
+    }
+}
+
+@media (max-width: 950px) {
+
+    .portfolio-preview {
+        width: 100%;
+    }
+
+    .portfolio-preview .preview-title h2 {
+        font-size: 21px;
+    }
+
+    .gallery {
+        height: 550px;
+    }
+}
+
+@media (max-width: 650px) {
+
+    .portfolio-preview {
+        width: 90%;
+    }
+
+    .portfolio-preview .preview-title h2 {
+        font-size: 21px;
+    }
+
+    .gallery {
+        display: none;
+    }
+
+    .gallery-small {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .gallery-small img {
+        width: 100%;
+        object-fit: cover;
+        height: 195px;
+    }
+
+}
+
+/* CSS for description */
+
+.descripcion {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 120px auto;
+    border-top: 1px solid #B6B6B6;
+    border-bottom: 1px solid #B6B6B6;
+}
+
+.descripcion p {
+    width: 60%;
+    text-align: center;
+    margin: 130px auto;
+    color: #535353;
+    font-size: 1.5rem;
+}
+
+.bold {
+    font-family: 'AgrandirH', 'Roboto', sans-serif;
+    font-weight: bold;
+    color: #535353;
+}
+
+@media(max-width: 650px) {
+
+    .descripcion {
+        margin: 50px auto;
+    }
+
+    .descripcion p {
+        width: 90%;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        font-size: 1rem;
+    }
+
+}
+
+/* CSS for services */
+
+.caja-servicios {
+    display: flex;
+    margin: 100px auto;
+    justify-content: space-around;
+    width: 90%;
+    max-width: 1300px;
+}
+
+.caja-servicios div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 28%;
+}
+
+.caja-servicios div img {
+    padding-bottom: 20px;
+    width: 100%;
+}
+
+.caja-servicios div h3 {
+    font-family: 'Agrandir', 'Roboto', sans-serif;
+    align-self: flex-start;
+}
+
+.caja-servicios div h3,
+.caja-servicios div p {
+    font-weight: 100;
+    color: #575757;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.caja-servicios div p {
+    font-size: 1rem;
+}
+
+@media(max-width: 650px) {
+
+    .caja-servicios {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin: 60px auto;
+    }
+
+    .caja-servicios div,
+    .caja-servicios div picture,
+    .caja-servicios div picture img {
+        width: 100%;
+    }
+
+    .caja-servicios div img {
+        padding-top: 40px;
+    }
+
+    .caja-servicios div h3 {
+        align-self: center;
+        font-size: 16px;
+        letter-spacing: 1px;
+    }
+
+    .caja-servicios div h3,
+    .caja-servicios div p {
+        width: 85%;
+    }
+
+}
+
+/*CSS for Contact Form*/
+
+.contact-form-container {
+    width: 100%;
+    background-color: #535353;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-form {
+    width: 52%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin: 40px auto;
+}
+
+.contact-form h2 {
+    margin: 0 auto 10px 5%;
+    font-family: 'Agrandir', 'Roboto', sans-serif;
+    letter-spacing: 1px;
+    font-weight: 100;
+    color: #DEDBD5;
+    align-self: flex-start;
+}
+
+.contact-form form {
+    width: 100%;
+
+}
+
+.contact-form label {
+    font-weight: 300;
+    color: #DEDBD5;
+}
+
+.contact-form form input,
+.contact-form form textarea {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    color: #535353;
+    resize: none;
+}
+
+.contact-form input {
+    height: 28px;
+}
+
+.contact-form input[type="submit"] {
+    margin-top: 20px;
+    font-family: 'AgrandirR', 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 1.3rem;
+    float: right;
+    width: 110px;
+    height: 50px;
+    background-color: #DEDBD5;
+    border: none;
+    box-shadow: 0px 3px 4px 1px #222222;
+}
+
+.contact-form input[type="submit"]:active {
+    background-color: #535353;
+    color: #DEDBD5;
+}
+
+@media(max-width:650px) {
+    .contact-form {
+        width: 80%;
+    }
+}
+
+/* CSS for "get in touch" section */
+
+.contact-section {
+    display: flex;
+    background-color: #FFFFFF;
+    height: 500px;
+}
+
+.contact-section div:first-of-type {
+    width: 35%;
+}
+
+.contact-section div:nth-of-type(2) {
+    width: 65%;
+}
+
+.contact-section div .box1,
+.contact-section div .box2 {
+    border-right: 1px solid #B6B6B6;
+}
+
+.contact-section div .box1,
+.contact-section div .box2,
+.contact-section div .box3,
+.contact-section div .box4 {
+    width: 100%;
+}
+
+.contact-section div .box2,
+.contact-section div .box4 {
+    height: 35%;
+}
+
+.contact-section div .box1,
+.contact-section div .box3 {
+    border-bottom: 1px solid #B6B6B6;
+    height: 65%;
+}
+
+.contact-section div .box3,
+.contact-section div .box4 {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.box1 {
+    font-family: 'Inter', sans-serif;
+    padding: 30px;
+
+}
+
+.box1 h2 {
+    font-family: 'Inter', sans-serif;
+    font-size: 2.8rem;
+    color: #535353;
+}
+
+.box1 small {
+    color: #222222;
+    text-shadow: 0px 0px 0px #222222;
+    margin-left: 8px;
+    text-decoration: underline gray;
+    text-underline-offset: 2px;
+}
+
+.box3 {
+    padding: 20px;
+}
+
+.box3 a img {
+    height: 55px;
+    margin: 10px;
+}
+
+.box4 {
+    padding: 30px;
+    font-size: 1.4rem;
+}
+
+.box4 p {
+    color: #535353;
+    transform: scaleX(1.05);
+    transform-origin: right;
+}
+
+small img {
+    height: 10px;
+    margin-left: 10px;
+}
+
+@media(max-width:650px) {
+
+    .contact-section {
+        zoom: 0.6;
+    }
+
+    .box1 small {
+        zoom: 1.1;
+    }
+}
+
+
+/* CSS for footer */
+
+footer {
+    width: 100%;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer p {
+    color: #FFFFFF;
+    font-size: 1.3rem;
+}
+
+footer p:first-of-type {
+    margin-top: 10px;
+    font-size: 2.3rem;
+    font-weight: bold;
+}
+
+footer p:nth-of-type(2) {
+    margin-bottom: 10px;
+}
+
+@media(max-width:650px) {
+
+    footer {
+        zoom: 0.8;
+    }
+
+}
+
+/*CSS for all the portfolio subpages*/
+
+.portfolio-title {
+    width: 100%;
+    background-color: #535353;
+    padding: 30px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+
+}
+
+.portfolio-title .backToPortfolio {
+    padding: 25px;
+    position: absolute;
+    left: 50px;
+}
+
+.portfolio-title .backToPortfolio:hover {
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+.portfolio-title .backToPortfolio img {
+    zoom: 1.5;
+}
+
+.portfolio-title h2 {
+    font-family: 'Agrandir', 'Roboto', sans-serif;
+    font-weight: 100;
+    font-size: 35px;
+    color: #DEDBD5;
+    text-align: right;
+    margin-right: 15px;
+}
+
+.portfolio-subtitle {
+    margin: 50px;
+}
+
+.portfolio-subtitle p {
+    margin: 50px;
+}
+
+.portfolio-gallery {
+    margin: 50px auto;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.portfolio-gallery img {
+    height: 350px;
+    width: 350px;
+    object-fit: cover;
+}
+
+.subpage-gallery {
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    gap: 15px;
+}
+
+.subpage-gallery img {
+    width: 100%;
+}
+
+.portfolio-sublink {
+    display: flex;
+    justify-content: start;
+    margin: 30px auto 150px 20px;
+    padding-left: 15px;
+}
+
+.portfolio-sublink h2 {
+    text-align: left;
+    font-family: 'Agrandir', 'Roboto', sans-serif;
+    letter-spacing: 1px;
+    font-weight: 100;
+    font-size: 28px;
+    color: #535353;
+}
+
+.portfolio-sublink img {
+    transform: rotate(180deg);
+    height: 28px;
+    padding-left: 25px;
+}
+
+@media (max-width: 1400px) {
+
+    .portfolio-sublink h2 {
+        font-size: 21px;
+    }
+
+    .portfolio-sublink img {
+        height: 21px;
+        margin-bottom: 2px;
+    }
+}
+
+@media (max-width: 650px) {
+
+    .portfolio-title {
+        justify-content: end;
+    }
+
+    .portfolio-title h2 {
+        zoom: 0.5;
+    }
+
+    .portfolio-title .backToPortfolio {
+        left: 20px;
+    }
+
+    .portfolio-title .backToPortfolio img {
+        zoom: 1.2;
+    }
+
+    .portfolio-subtitle {
+        margin: 50px 20px;
+    }
+
+    .portfolio-subtitle p {
+        margin: 20px;
+    }
+
+    .portfolio-gallery a {
+        width: 100%;
+    }
+
+    .portfolio-gallery a img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+    }
+
+    .portfolio-sublink {
+        margin-top: 15px;
+        padding-left: 0;
+        margin-left: 10px;
+        margin-bottom: 80px;
+    }
+
+    .portfolio-sublink h2 {
+        font-size: 16px;
+    }
+
+    .portfolio-sublink img {
+        height: 16px;
+        margin-bottom: 4px;
+    }
+
+
+
+}

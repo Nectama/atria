@@ -1,0 +1,236 @@
+<!DOCTYPE <!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Atria | Home</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100&display=swap" rel="stylesheet">
+</head>
+
+
+<body id="body" style="overflow:hidden;">
+
+    <div id="loader">
+        <img class="logo" src="images/atria.gif" alt="">
+    </div>
+
+    <div id="content" class="hidden">
+        <header class="big-screens">
+            <div id="logoContainer">
+                <a href="index.html">
+                    <p>Atria.</p>
+                </a>
+            </div>
+            <nav id="nav">
+                <div class="menuLinks">
+                    <a href="portfolio.html">PORTFOLIO</a>
+                    <a href="#conocenos">CONOCENOS</a>
+                    <a href="#contacto">CONTACTO</a>
+                </div>
+            </nav>
+        </header>
+        <header id="smallHeader" class="small-screens">
+            <div id="logoContainer">
+                <a href="index.html">
+                    <p>Atria.</p>
+                </a>
+                <a href="javascript:void(0);" class="icon" onclick="hamburgerMenu()">
+                    <span class="material-symbols-outlined size-48">
+                        menu
+                    </span>
+                </a>
+            </div>
+            <nav id="nav">
+                <div id="menuLinks">
+                    <a href="portfolio.html">PORTFOLIO</a>
+                    <a href="#conocenos">CONOCENOS</a>
+                    <a href="#contacto">CONTACTO</a>
+                </div>
+            </nav>
+        </header>
+
+        <div id="vid" class="vid fade-in">
+            <video loop autoplay muted controls>
+                <source src="images/360.mp4" type="video/mp4">
+            </video>
+            <a class="portfolio-link" href="portfolio.html">
+                <h2>PORTFOLIO </h2><img src="images/chevron-right.svg" alt="">
+            </a>
+        </div>
+
+        <div class="infinite-loop fade-in">
+            <div class="overlay-img">
+                <img class="static-img" src="images/Loop1.png" alt="">
+            </div>
+            <div class="primary">
+                <img class="back-img" src="images/Loop2.png" alt="">
+                <img class="front-img" src="images/Loop3.png" alt="">
+            </div>
+            <div class="secondary">
+                <img class="back-img" src="images/Loop2.png" alt="">
+                <img class="front-img" src="images/Loop3.png" alt="">
+            </div>
+        </div>
+
+        <div class="portfolio-preview">
+            <div class="preview-title" data-aos="fade-up" data-aos-duration="1000">
+                <h2>WHAT WE DO</h2>
+            </div>
+            <a href="portfolio.html">
+                <div class="gallery">
+                    <div class="tall-image" data-aos="fade-right" data-aos-duration="1000">
+                        <img src="images/preview-borja.png" alt="proyecto borja">
+                    </div>
+                    <div class="small-image-group">
+                        <div class="small-image" data-aos="fade-down" data-aos-duration="1000">
+                            <img src="images/preview-manso.jpg" alt="proyecto manso">
+                        </div>
+                        <div class="small-image" data-aos="fade-up" data-aos-duration="1000">
+                            <img src="images/preview-la251.png" alt="proyecto la 251">
+                        </div>
+                    </div>
+                    <div class="half-gallery-column">
+                        <div class="big-image" data-aos="fade-left" data-aos-duration="1000">
+                            <img src="images/preview-chwala.jpg" alt="proyecto chwala">
+                        </div>
+                        <div class="small-image-group">
+                            <div class="small-image" data-aos="fade-right" data-aos-duration="1000">
+                                <img src="images/preview-bersanini.png" alt="proyecto agos bersanini">
+                            </div>
+                            <div class="small-image" data-aos="fade-up" data-aos-duration="1000">
+                                <img src="images/preview-intobox.png" alt="proyecto into the box">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-small fade-in">
+                    <img src="images/preview-manso-small.png" alt="proyecto manso">
+                    <img src="images/preview-bersanini.png" alt="proyecto agos bersanini">
+                    <img src="images/preview-borja-small.png" alt="proyecto borja">
+                    <img src="images/preview-chwala-small.png" alt="proyecto chwala">
+                    <img src="images/preview-intobox.png" alt="proyecto into the box">
+                </div>
+            </a>
+            <a id="conocenos" class="portfolio-link" href="portfolio.html">
+                <h2>PORTFOLIO</h2><img src="images/chevron-right.svg" alt="">
+            </a>
+        </div>
+
+
+
+        <div class="descripcion">
+            <p data-aos="fade-up" data-aos-duration="1000">
+                Somos un estudio creativo enfocado en el desarrollo de <span class="bold">identidades visuales</span>.
+                Creemos que la comunicación
+                atraviesa a los usuarios, creando <span class="bold">experiencias</span>, basándonos en ella para
+                conectar a
+                las marcas con <span class="bold">nuevas plataformas</span> de consumo. Autenticidad, innovación y
+                presencia
+                digital, pilares fundamentales sobre los que
+                construir la <span class="bold">personalidad de marca</span>.
+            </p>
+        </div>
+
+        <div class="caja-servicios">
+            <div data-aos="fade-up" data-aos-duration="1000">
+                <picture>
+                    <source media="(min-width:651px)" srcset="images/diseno-img.png">
+                    <img src="images/diseno-img-small.png" alt="servicio">
+                </picture>
+                <h3>DISEÑO</h3>
+                <p>
+                    Branding | Diseño Gráfico | Piezas para Redes Sociales | Identidad de Marca | Ilustraciones 2D y 3D
+                    |
+                    Papelería | Diseño UX UI | Diseño de presentaciones
+                </p>
+            </div>
+            <div data-aos="fade-up" data-aos-duration="1000">
+                <picture>
+                    <source media="(min-width:651px)" srcset="images/contenido-img.png">
+                    <img src="images/contenido-img-small.png" alt="servicio">
+                </picture>
+                <h3>CONTENIDO</h3>
+                <p>
+                    Producción de fotos y videos | Contenido para Redes Sociales | Contenido para TIK TOK | Contenido
+                    para
+                    Web 3.0 & Metaverso
+                </p>
+            </div>
+            <div data-aos="fade-up" data-aos-duration="1000">
+                <picture>
+                    <source media="(min-width:651px)" srcset="images/marketing-img.png">
+                    <img src="images/marketing-img-small.png" alt="servicio">
+                </picture>
+                <h3>MARKETING</h3>
+                <p id="contacto">
+                    Estrategia en Comunicación 360 | Estrategia para Redes Sociales | Community Manager
+                </p>
+            </div>
+        </div>
+
+        <div class="contact-form-container">
+            <div class="contact-form">
+                <h2>FORMULARIO</h2>
+                <form id="contactForm">
+                    <label for="name">NOMBRE</label><br>
+                    <input type="text" id="name" name="name" placeholder="Nombre" required><br>
+                    <label for="email">MAIL</label><br>
+                    <input type="email" id="email" name="email" placeholder="example@domain.com" required><br>
+                    <label for="idea">CÓMO TE PODEMOS AYUDAR?</label><br>
+                    <textarea id="idea" name="idea" rows="7" cols="33">Describinos tu idea</textarea><br>
+                    <input type="submit" value="ENVIAR">
+                </form>
+            </div>
+        </div>
+
+        <div class="contact-section">
+            <div>
+                <div class="box1">
+                    <h2>GET IN<br>TOUCH</h2>
+                    <small>WORK WITH US <img src="images/Group.svg" alt=""></small>
+                </div>
+                <div class="box2">
+                    <div></div>
+                </div>
+            </div>
+            <div>
+                <div class="box3">
+                    <a href="mailto:info@atria-studio.com.ar"><img src="images/mail.png" alt=""></a>
+                    <a href="#"><img src="images/linkedin.png" alt=""></a>
+                    <a href="https://www.instagram.com/atria_studio/"><img src="images/instagram.png" alt=""></a>
+                </div>
+                <div class="box4">
+                    <p>info@atria-studio.com.ar</p>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>Atria.</p>
+            <p>Copyright &#169; 2023 Atria</p>
+        </footer>
+    </div>
+
+    <script src="scripts.js" async defer></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="https://smtpjs.com/v3/smtp.js">
+    </script>
+</body>
+
+</html>
