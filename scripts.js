@@ -4,7 +4,7 @@ window.addEventListener('load', function () {
     // Simulate the loading process, this page is too light it barely takes time to load so i'm just pretending here because the owner wanted a loading animation
     setTimeout(function () {
         loader.style.display = 'none';
-        document.getElementById("body").style.overflow = "scroll";
+        document.getElementById("body").style.overflowY = "scroll";
     }, 2900); // Change the duration as needed
 });
 

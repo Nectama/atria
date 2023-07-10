@@ -47,11 +47,14 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
 }
 
 /* CSS for the header and menu for both big and small screens*/
 /* I did two different headers because i couldn't solve styling issues when clicking the hamburger icon on mobile,
-so a redistribution of items was needed.This can be done better but i couldn't figure it out before delivery date*/
+so a redistribution of items was needed. This can be done in better way but i couldn't figure it out before delivery date*/
 
 .big-screens,
 .small-screens {
@@ -207,21 +210,22 @@ nav {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin: 48px auto auto auto;
+    padding-top: 48px;
+    margin: auto;
     width: 80%;
     animation: fadeInAnimation ease 2s;
 }
 
 @media (max-width: 1400px) {
     .vid {
-        margin-top: 35px;
+        padding-top: 35px;
     }
 }
 
 @media (max-width: 950px) {
     .vid {
         width: 100%;
-        margin: 0;
+        padding-top: 0;
     }
 }
 
@@ -229,8 +233,8 @@ nav {
     display: flex;
     justify-content: end;
     align-items: center;
-    margin: 30px 20px 20px auto;
-    padding-right: 15px;
+    margin: 30px 0 20px auto;
+    padding-right: 5px;
 }
 
 .portfolio-link h2 {
@@ -238,7 +242,7 @@ nav {
     font-family: 'Agrandir', 'Roboto', sans-serif;
     letter-spacing: 1px;
     font-weight: 100;
-    font-size: 28px;
+    font-size: 21px;
     color: #535353;
     text-align: right;
 }
@@ -246,18 +250,18 @@ nav {
 /*I had to add a stupid padding-bottom of a few px because the chevron icon doesn't properly align with the text*/
 
 .portfolio-link img {
-    height: 28px;
+    height: 21px;
     padding-left: 25px;
     margin-bottom: 3px;
 }
 
 @media (max-width: 1400px) {
     .portfolio-link h2 {
-        font-size: 21px;
+        font-size: 17px;
     }
 
     .portfolio-link img {
-        height: 21px;
+        height: 17px;
         margin-bottom: 2px;
     }
 }
@@ -271,11 +275,11 @@ nav {
     }
 
     .portfolio-link h2 {
-        font-size: 16px;
+        font-size: 12px;
     }
 
     .portfolio-link img {
-        height: 16px;
+        height: 12px;
         margin-bottom: 4px;
     }
 }
@@ -396,8 +400,9 @@ nav {
 .gallery {
     display: flex;
     justify-content: space-between;
-    height: 930px;
+    height: 830px;
     width: 100%;
+    overflow: hidden;
 }
 
 .gallery .tall-image {
@@ -495,7 +500,7 @@ nav {
     }
 
     .gallery {
-        height: 720px;
+        height: 520px;
     }
 }
 
@@ -509,9 +514,6 @@ nav {
         font-size: 21px;
     }
 
-    .gallery {
-        height: 550px;
-    }
 }
 
 @media (max-width: 650px) {
@@ -591,6 +593,7 @@ nav {
     justify-content: space-around;
     width: 90%;
     max-width: 1300px;
+    overflow: hidden;
 }
 
 .caja-servicios div {
