@@ -728,6 +728,11 @@ nav {
     color: #DEDBD5;
 }
 
+.contact-form input[type="submit"]:hover {
+    background-color: #222222;
+    color: #DEDBD5;
+}
+
 @media(max-width:650px) {
     .contact-form {
         width: 80%;
