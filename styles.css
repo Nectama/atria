@@ -897,6 +897,11 @@ footer p:nth-of-type(2) {
     zoom: 1.5;
 }
 
+.portfolio-title h2,
+.portfolio-subtitle p {
+    text-transform: uppercase;
+}
+
 .portfolio-title h2 {
     font-family: 'Agrandir', 'Roboto', sans-serif;
     font-weight: 100;
@@ -904,6 +909,9 @@ footer p:nth-of-type(2) {
     color: #DEDBD5;
     text-align: right;
     margin-right: 15px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
 }
 
 .portfolio-subtitle {
@@ -978,10 +986,6 @@ footer p:nth-of-type(2) {
 }
 
 @media (max-width: 650px) {
-
-    .portfolio-title {
-        justify-content: end;
-    }
 
     .portfolio-title h2 {
         zoom: 0.5;
