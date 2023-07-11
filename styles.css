@@ -216,6 +216,10 @@ nav {
     animation: fadeInAnimation ease 2s;
 }
 
+.video {
+    height: 32rem;
+}
+
 @media (max-width: 1400px) {
     .vid {
         padding-top: 35px;
@@ -226,6 +230,10 @@ nav {
     .vid {
         width: 100%;
         padding-top: 15px;
+    }
+
+    .video {
+        height: 18rem;
     }
 }
 
@@ -338,6 +346,8 @@ nav {
     animation: secondary 6s linear infinite;
     position: absolute;
 }
+
+
 
 @keyframes primary {
     to {
