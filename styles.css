@@ -781,13 +781,11 @@ nav {
 }
 
 .box1 {
-    font-family: 'Inter', sans-serif;
     padding: 30px;
-
 }
 
 .box1 h2 {
-    font-family: 'Inter', sans-serif;
+    font-weight: 100;
     font-size: 2.8rem;
     color: #535353;
 }
