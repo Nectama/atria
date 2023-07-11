@@ -217,12 +217,16 @@ nav {
 }
 
 .video {
-    height: 32rem;
+    height: 45rem;
 }
 
 @media (max-width: 1400px) {
     .vid {
         padding-top: 35px;
+    }
+
+    .video {
+        height: 28rem;
     }
 }
 
@@ -233,7 +237,7 @@ nav {
     }
 
     .video {
-        height: 18rem;
+        height: 12rem;
     }
 }
 
