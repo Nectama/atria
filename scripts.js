@@ -1,11 +1,19 @@
 window.addEventListener('load', function () {
     var loader = document.getElementById('loader');
+    var body = document.getElementById('body');
 
-    // Simulate the loading process, this page is too light it barely takes time to load so i'm just pretending here because the owner wanted a loading animation
-    setTimeout(function () {
+    var isAnimationShown = sessionStorage.getItem('animationShown');
+    if (isAnimationShown) {
         loader.style.display = 'none';
-        document.getElementById("body").style.overflowY = "scroll";
-    }, 2900); // Change the duration as needed
+        body.style.overflowY = 'scroll';
+    } else {
+        // Simulate the loading process, this page is too light it barely takes time to load so i'm just pretending here because the owner wanted a loading animation
+        setTimeout(function () {
+            loader.style.display = 'none';
+            body.style.overflowY = 'scroll';
+            sessionStorage.setItem('animationShown', true);
+        }, 2000); // Change the duration as needed
+    }
 });
 
 function hamburgerMenu() {

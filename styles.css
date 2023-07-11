@@ -562,11 +562,12 @@ nav {
     margin: 130px auto;
     color: #535353;
     font-size: 1.5rem;
+    font-family: 'Roboto', sans-serif;
 }
 
 .bold {
-    font-family: 'AgrandirH', 'Roboto', sans-serif;
-    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bolder;
     color: #535353;
 }
 
