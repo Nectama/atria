@@ -217,7 +217,8 @@ nav {
 }
 
 .video {
-    height: 45rem;
+    height: 48rem;
+    object-fit: cover;
 }
 
 @media (max-width: 1400px) {
@@ -226,7 +227,7 @@ nav {
     }
 
     .video {
-        height: 28rem;
+        height: 31rem;
     }
 }
 
@@ -237,7 +238,7 @@ nav {
     }
 
     .video {
-        height: 12rem;
+        height: 15rem;
     }
 }
 
