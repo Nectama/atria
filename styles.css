@@ -338,8 +338,7 @@ video {
 }
 
 .primary .front-img {
-    width: -webkit-fit-content; /* Safari */
-    width: fit-content;
+    display: inline-block;
     height: 120px;
     position: absolute;
     -webkit-animation: primary 7s linear infinite; /* Safari 4+ */
@@ -348,8 +347,7 @@ video {
 }
 
 .secondary .front-img {
-    width: -webkit-fit-content; /* Safari */
-    width: fit-content;
+    display: inline-block;
     height: 120px;
     position: absolute;
     -webkit-animation: secondary 7s linear infinite; /* Safari 4+ */
@@ -358,16 +356,14 @@ video {
 }
 
 .primary .back-img {
-    width: -webkit-fit-content; /* Safari */
-    width: fit-content;
+    display: inline-block;
     -webkit-animation: primary 6s linear infinite; /* Safari 4+ */
     animation: primary 6s linear infinite;
     position: absolute;
 }
 
 .secondary .back-img {
-    width: -webkit-fit-content; /* Safari */
-    width: fit-content;
+    display: inline-block;
     -webkit-animation: secondary 6s linear infinite; /* Safari 4+ */
     animation: secondary 6s linear infinite;
     position: absolute;
