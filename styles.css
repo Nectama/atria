@@ -308,6 +308,7 @@ nav {
     margin-top: 90px;
     margin-bottom: 90px;
     overflow: hidden;
+    -webkit-animation: fadeInAnimation ease 2s; /* Safari 4+ */
     animation: fadeInAnimation ease 2s;
 }
 
@@ -325,35 +326,39 @@ nav {
 }
 
 .primary .front-img {
+    width: -webkit-fit-content; /* Safari */
     width: fit-content;
     height: 120px;
     position: absolute;
+    -webkit-animation: primary 7s linear infinite; /* Safari 4+ */
     animation: primary 7s linear infinite;
     z-index: 10;
-    object-fit: cover;
 }
 
 .secondary .front-img {
+    width: -webkit-fit-content; /* Safari */
     width: fit-content;
     height: 120px;
     position: absolute;
+    -webkit-animation: secondary 7s linear infinite; /* Safari 4+ */
     animation: secondary 7s linear infinite;
     z-index: 10;
-    object-fit: cover;
 }
 
 .primary .back-img {
+    width: -webkit-fit-content; /* Safari */
     width: fit-content;
+    -webkit-animation: primary 6s linear infinite; /* Safari 4+ */
     animation: primary 6s linear infinite;
     position: absolute;
-    object-fit: cover;
 }
 
 .secondary .back-img {
+    width: -webkit-fit-content; /* Safari */
     width: fit-content;
+    -webkit-animation: secondary 6s linear infinite; /* Safari 4+ */
     animation: secondary 6s linear infinite;
     position: absolute;
-    object-fit: cover;
 }
 
 
