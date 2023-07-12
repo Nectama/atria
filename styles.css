@@ -242,8 +242,16 @@ video {
     }
 
     .julian {
+        height: 23rem;
+    }
+}
+
+@media (max-width: 650px) {
+
+    .julian {
         height: 15rem;
     }
+
 }
 
 .portfolio-link {
