@@ -218,7 +218,7 @@ nav {
 
 .video {
     height: 48rem;
-    object-fit: cover;
+    object-fit: cover !important;
 }
 
 @media (max-width: 1400px) {
