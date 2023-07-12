@@ -330,6 +330,7 @@ nav {
     position: absolute;
     animation: primary 7s linear infinite;
     z-index: 10;
+    object-fit: cover;
 }
 
 .secondary .front-img {
@@ -338,18 +339,21 @@ nav {
     position: absolute;
     animation: secondary 7s linear infinite;
     z-index: 10;
+    object-fit: cover;
 }
 
 .primary .back-img {
     width: fit-content;
     animation: primary 6s linear infinite;
     position: absolute;
+    object-fit: cover;
 }
 
 .secondary .back-img {
     width: fit-content;
     animation: secondary 6s linear infinite;
     position: absolute;
+    object-fit: cover;
 }
 
 
