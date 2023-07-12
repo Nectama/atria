@@ -218,6 +218,10 @@ nav {
 
 .julian {
     height: 48rem;
+    object-fit: cover;
+}
+
+video {
     object-fit: cover !important;
 }
 
