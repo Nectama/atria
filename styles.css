@@ -216,7 +216,7 @@ nav {
     animation: fadeInAnimation ease 2s;
 }
 
-.video {
+.julian {
     height: 48rem;
     object-fit: cover !important;
 }
@@ -226,7 +226,7 @@ nav {
         padding-top: 35px;
     }
 
-    .video {
+    .julian {
         height: 31rem;
     }
 }
@@ -237,7 +237,7 @@ nav {
         padding-top: 15px;
     }
 
-    .video {
+    .julian {
         height: 15rem;
     }
 }
