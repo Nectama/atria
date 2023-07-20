@@ -416,6 +416,7 @@ video {
     align-items: center;
     width: 75%;
     margin: auto;
+    margin-top: 2rem;
 }
 
 .portfolio-preview .preview-title {
